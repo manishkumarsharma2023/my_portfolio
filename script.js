@@ -1,3 +1,54 @@
+const nameText = "Hey, It's Me Manish";
+
+const jobText = "Web Developer 💻";
+
+
+
+let i = 0;
+
+let j = 0;
+
+
+
+function typeName() {
+
+    if (i < nameText.length) {
+
+        document.getElementById("typing-name").innerHTML += nameText.charAt(i);
+
+        i++;
+
+        setTimeout(typeName, 100);
+
+    } else {
+
+        setTimeout(typeJob, 500);
+
+    }
+
+}
+
+
+
+function typeJob() {
+
+    if (j < jobText.length) {
+
+        document.getElementById("typing-job").innerHTML += jobText.charAt(j);
+
+        j++;
+
+        setTimeout(typeJob, 100);
+
+    }
+
+}
+
+
+
+window.onload = typeName;
+
+
 const form = document.getElementById("contactForm");
 
 if (form) {
